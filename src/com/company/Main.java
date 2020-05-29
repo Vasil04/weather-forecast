@@ -7,39 +7,42 @@ import java.nio.file.*;;
 
 public class Main {
 
-//    public static void main(String[] args) {
-//        File file = new File("weather.txt");
-//        try {
-//            Scanner fileReader = new Scanner(file, "windows-1251");
-//            System.out.println(fileReader.nextLine());
-//
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//    }
-    // Java Program to illustrate reading from text file
-// as string in Java
-        public static String readFileAsString(String fileName)throws Exception
-        {
-            String data = "";
-            data = new String(Files.readAllBytes(Paths.get(fileName)));
-            return data;
+    public static void main(String[] args) {
+        try {
+            DefaultReader.readUntilSpecialSymbol("weather.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        Scanner input = new Scanner(System.in);
 
-        public static void main(String[] args) throws Exception
-        {
-            String data = readFileAsString("weather.txt");
-            String test = "";
-            char current = ' ';
-            for (int i = 0; i < data.length(); i++) {
-                current = data.charAt(i);
-                if (current == ';'){
-                    break;
-                }
-                else {
-                    test += data.charAt(i);
+        System.out.println("Изберете опция:");
+        System.out.println("За по-подробна информация за времето утре - '1'");
+        System.out.println("За прогнозата за 10 дни напред - '2'");
+        System.out.println("За прогнозата за 10 дни назад - '3'");
+        System.out.println("За да прекратите програмата - 'стоп' или 'stop'");
+        String choice = "";
+        while (true){
+            choice = input.nextLine();
+            if (choice.equalsIgnoreCase("stop")||choice.equalsIgnoreCase("стоп")){
+                break;
+            }
+            else if (choice.equalsIgnoreCase("1")){
+                try {
+                    Tomorrow.readUntilSpecialSymbol("weather.txt");
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
-            System.out.println(test);
+            else if (choice.equalsIgnoreCase("2")){
+
+            }
+            else if (choice.equalsIgnoreCase("3")){
+
+            }
+
+            else {
+                System.out.println("Избраната от вас опция е невалидна");
+            }
         }
     }
+}
