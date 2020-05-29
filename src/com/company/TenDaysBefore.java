@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class TenDaysBefore extends DefaultReader{
-    public static void readUntilSpecialSymbol(String file) throws Exception
+    public static void readSpecificLine(String file) throws Exception
     {
         String fileName = "weather.txt";
         int counter = 0;

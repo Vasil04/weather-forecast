@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         String fileName = "weather.txt";
         try {
-            DefaultReader.readUntilSpecialSymbol(fileName);
+            DefaultReader.readSpecificLines(fileName);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -25,21 +25,21 @@ public class Main {
             }
             else if (choice.equalsIgnoreCase("1")){
                 try {
-                    Tomorrow.readUntilSpecialSymbol(fileName);
+                    Tomorrow.readSpecificLine(fileName);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             else if (choice.equalsIgnoreCase("2")){
                 try {
-                    TenDaysForward.readUntilSpecialSymbol(fileName);
+                    TenDaysForward.readSpecificLine(fileName);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             else if (choice.equalsIgnoreCase("3")){
                 try {
-                    TenDaysBefore.readUntilSpecialSymbol(fileName);
+                    TenDaysBefore.readSpecificLine(fileName);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -15,7 +15,7 @@ public class DefaultReader {
 //        return data;
 //    }
 
-    public static void readUntilSpecialSymbol(String file) throws Exception
+    public static void readSpecificLines(String file) throws Exception
     {
 //        File file1 = new File("weather.txt");
 //        Scanner fileReader = new Scanner(file1, "utf-8");

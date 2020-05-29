@@ -5,7 +5,7 @@ import java.io.FileReader;
 
 public class Tomorrow extends DefaultReader {
 
-    public static void readUntilSpecialSymbol(String file) throws Exception
+    public static void readSpecificLine(String file) throws Exception
     {
         String fileName = "weather.txt";
         int counter = 0;
