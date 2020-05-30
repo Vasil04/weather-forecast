@@ -17,7 +17,7 @@ public class TenDaysBefore extends DefaultReader{
 
         while((line = bufferedReader.readLine()) != null) {
             counter++;
-            if(counter > 18)
+            if(counter > 17)
             {
                 printer(line);
                 System.out.println("-------------------------------------------------------------------------------");

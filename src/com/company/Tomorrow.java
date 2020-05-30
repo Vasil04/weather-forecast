@@ -18,7 +18,7 @@ public class Tomorrow extends DefaultReader {
 
         while((line = bufferedReader.readLine()) != null) {
             counter++;
-            if(counter >= 5 && counter <=8)
+            if(counter >= 4 && counter <=7)
             {
                 printer(line);
                 System.out.println("-------------------------------------------------------------------------------");

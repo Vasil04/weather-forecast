@@ -17,7 +17,7 @@ public class TenDaysForward extends DefaultReader{
 
         while((line = bufferedReader.readLine()) != null) {
             counter++;
-            if(counter >= 9 && counter <=18)
+            if(counter >= 8 && counter <=17)
             {
                 printer(line);
                 System.out.println("-------------------------------------------------------------------------------");

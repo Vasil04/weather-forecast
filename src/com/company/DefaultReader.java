@@ -33,7 +33,7 @@ public class DefaultReader {
 
         while((line = bufferedReader.readLine()) != null) {
             counter++;
-            if(counter <= 4)
+            if(counter <= 3)
             {
                 printer(line);
                 System.out.println("-------------------------------------------------------------------------------");
